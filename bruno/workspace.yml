@@ -1,0 +1,12 @@
+opencollection: 1.0.0
+info:
+  name: "bruno"
+  type: workspace
+
+collections:
+  - name: "banking-api"
+    path: "collections/banking-api"
+
+specs:
+
+docs: ''
