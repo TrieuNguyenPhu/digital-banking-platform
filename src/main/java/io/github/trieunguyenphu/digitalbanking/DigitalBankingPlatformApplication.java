@@ -1,4 +1,4 @@
-package io.github.trieunguyenphu.digitalbankingplatform;
+package io.github.trieunguyenphu.digitalbanking;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
