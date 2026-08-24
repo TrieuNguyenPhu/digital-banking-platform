@@ -1,0 +1,17 @@
+meta {
+  name: Create Customer
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v1/customers
+  body: json
+}
+
+body:json {
+  {
+    "fullName": "Nguyen Van A",
+    "email": "nguyen.van.a@example.com"
+  }
+}
