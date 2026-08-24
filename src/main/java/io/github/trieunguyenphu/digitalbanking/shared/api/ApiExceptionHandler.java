@@ -1,6 +1,5 @@
 package io.github.trieunguyenphu.digitalbanking.shared.api;
 
-import io.github.trieunguyenphu.digitalbanking.customer.application.CustomerAlreadyExistsException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -24,11 +23,6 @@ public class ApiExceptionHandler {
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResponseEntity<ApiErrorResponse> handleMalformedRequest(HttpMessageNotReadableException exception) {
         return error(HttpStatus.BAD_REQUEST, "MALFORMED_REQUEST", "Request body is malformed", List.of());
-    }
-
-    @ExceptionHandler(CustomerAlreadyExistsException.class)
-    public ResponseEntity<ApiErrorResponse> handleDuplicateCustomer(CustomerAlreadyExistsException exception) {
-        return error(HttpStatus.CONFLICT, "CUSTOMER_EMAIL_ALREADY_EXISTS", exception.getMessage(), List.of());
     }
 
     private ResponseEntity<ApiErrorResponse> error(
